@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <fieldset>
+      <form action="/" method="post">
+        <input type="text" class="ghost-input" placeholder="Enter a city" name="city" id="city" required>
+        <input type="submit" value="Get Weather" class="ghost-button">
+      </form>
+      <section>
+        <% if(data != null){ %>
+          <p>It's <%= data.temp %>°c in <%= data.city%>, <%=data.country%></p>
+          <img alt="<%=data.description%>" src="http://openweathermap.org/img/wn/<%=data.iconID%>@2x.png">
+          <p><%=data.description%></p>
+        <% } %>
+        
+        <% if(error != null){ %>
+          <p><%= error %></p>
+        <% } %>
+      </section>
+    </fieldset>
+  </div>
+</body>
+</html>

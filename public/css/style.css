@@ -1,0 +1,76 @@
+/* === Small CSS Reset === */
+*{
+  margin: 0;
+  padding: 0;
+}
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: auto;
+  margin: 0 auto;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 0;
+  min-width: min-content;
+  padding: 30px;
+}
+
+.ghost-input, p {
+  display: block;
+  font-weight: 300;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #4b545f;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  padding: 10px 15px;
+  margin: 30px auto;
+  transition: all 0.1s ease-in-out;
+}
+
+.ghost-input {
+  border-bottom: 1px solid #ddd;
+  max-width: 390px;
+  min-width: 350px;
+}
+
+.ghost-input:focus::placeholder {
+  color: #fff;
+  text-align: center;
+
+}
+
+.ghost-input:focus{
+  color: #fff;
+  background-color: purple;
+}
+
+.ghost-button {
+  background-color: transparent;
+  border: 2px solid purple;
+  padding: 10px 30px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 390px;
+  min-width: 350px;
+  transition: all 0.1s ease-in-out;
+}
+
+.ghost-button:hover {
+  border: solid 2px purple;
+}
+
+
